@@ -4,17 +4,19 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:0.4'
+    classpath 'com.android.tools.build:gradle:0.5.+'
   }
 }
 
 allprojects {
   group = 'com.actionbarsherlock'
-  version = '4.3.2-SNAPSHOT'
+  version = '4.4.0'
 
   repositories {
     mavenCentral()
   }
-}
 
-apply plugin: 'android-reporting'
+  tasks.withType(Compile) {
+    options.encoding = "UTF-8"
+  }
+}
